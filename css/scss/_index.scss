@@ -1,0 +1,21 @@
+.panel-zy {
+    .panel-body {
+        ul { 
+            list-style:none; 
+            padding-left:0 
+        }
+    }
+}
+
+.article-summary {
+    h2 {
+        margin-bottom: 0px;
+    }
+    a {
+        color: #4990e2;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #000;
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "msv4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "n/a",
+  "scripts": {
+    "develop": "./node_modules/gatsby/bin/gatsby.js develop",
+    "build": "./node_modules/gatsby/bin/gatsby.js build",
+    "genimgs": "./scripts/gen_small_imgs.js",
+    "handlebundle": "./scripts/handle_bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elvestar/msv4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elvestar/msv4/issues"
+  },
+  "homepage": "https://github.com/elvestar/msv4#readme",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.1.25",
+    "bootstrap": "^3.3.7",
+    "exif": "^0.6.0",
+    "exif-reader": "^1.0.2",
+    "fancybox": "^3.0.0",
+    "font-awesome": "^4.7.0",
+    "fs-extra": "^4.0.2",
+    "gatsby": "^0.12.34",
+    "highlight.js": "^9.12.0",
+    "image-size": "^0.6.1",
+    "jquery": "^3.2.1",
+    "path": "^0.12.7",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-grid-gallery": "^0.4.3",
+    "react-helmet": "^4.0.0",
+    "react-images": "^0.5.5",
+    "react-lazyload": "^2.2.7",
+    "safe-access": "^0.1.0",
+    "sharp": "^0.18.4",
+    "wait.for": "^0.6.6",
+    "zoom.js": "git+https://github.com/fat/zoom.js.git"
+  }
+}

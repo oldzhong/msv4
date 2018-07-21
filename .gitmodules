@@ -1,0 +1,6 @@
+[submodule "content/static/staticimgs"]
+	path = content/static/staticimgs
+	url = https://github.com/elvestar/staticimgs
+[submodule "content/static/imgs"]
+	path = content/static/imgs
+	url = https://github.com/elvestar/staticimgs

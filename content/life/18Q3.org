@@ -1,0 +1,9 @@
+#+TITLE: 2018 年 Q3
+#+DATE: 2018-07-01
+
+* 苹果猝不及防地预发布了新MacBook Pro <2018-07-12 四 21:23>
+本来还准备等新版iMac 27和Mac Pro的，这下我多了一种选择。我那使用了快五年的
+MacBook Pro也确实需要一个升级了。
+- [[https://bbs.ngacn.cc/read.php?tid=14488849][苹果更新MacBook Pro 2018款]]
+- [[https://bbs.ngacn.cc/read.php?tid=14488964][macbook pro更新了，换8代cpu]]
+- [[http://tieba.baidu.com/p/5792689884][【图片】【新闻】MacBook Pro 2018来了—— 8 代 U 与 32G 内存梦想成真【macbook_百度贴吧]]

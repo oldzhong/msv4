@@ -1,0 +1,109 @@
+#+TITLE: Jetty - Servlet Engine and Http Server
+#+DATE: 2017-10-11 16:55:28
+
+Jetty提供了一个Web Server和javax.servlet的容器， plus support for HTTP/2,
+WebSocket, OSGi, JMX, JNDI, JAAS and many other integrations. These
+components are open source and available for commercial use and distribution.
+
+* 资料收集
+- [[https://github.com/eclipse/jetty.project][eclipse/jetty.project: Eclipse Jetty® - Web Container & Clients]]
+- [[https://www.eclipse.org/jetty/][Jetty - Servlet Engine and Http Server]]
+- [[https://www.eclipse.org/jetty/documentation/current/][Jetty Docs (Current)]]
+
+  
+* 阅读Jetty The Definitive Reference
+
+** 18. Provided Servlets, Filters, and Handlers
+
+
+** Chapter 21. Embedding <2017-10-11 三 18:00>
+- [[https://www.eclipse.org/jetty/documentation/current/embedding-jetty.html][Embedding Jetty]]
+  
+#+BEGIN_QUOTE
+"Don’t deploy your application in Jetty, deploy Jetty in your application!"
+
+- Jetty's slogan
+#+END_QUOTE
+
+为了在应用中嵌入Jetty服务器，典型的做法分为下面四步：
+1. Create a Server instance.
+2. Add/Configure Connectors.
+3. Add/Configure Handlers and/or Contexts and/or Servlets.
+4. Start the Server.
+5. Wait on the server or do something else with your thread.
+   
+*** Embedding Servlets
+
+    
+* 模板引擎
+** FreeMarker
+Jetty不带模板引擎功能，要在外面找一个。看起来Freemaker不错：
+- [[http://freemarker.org/][FreeMarker Java Template Engine]]
+- [[http://zetcode.com/java/freemarker/#serv][FreeMarker tutorial - Introduction to FreeMarker Java template engine]]
+
+#+CAPTION: Freemarker Overview
+[[../static/imgs/jetty/freemarker_overview.png]]
+
+瞄了一眼FreeMarker文档，初步感受：
+1. 扩展了HTML标签来实现指令，例如<#if xx == "yy"></#if>。
+2. 支持include，实现过程式的调用。
+3. 支持定义函数<#function>，支持定义变量<#local>，这点不错，和Jinja2一样便利。
+4. 如何实现模板继承？还没在官方文档中找到，不过找到这篇文章： [[https://nickfun.github.io/posts/2014/freemarker-template-inheritance.html][Freemarker template inheritance - Implementation Specific]] 
+   
+*** FreeMarker的模板变更自动加载为何失效了？ <2018-03-27 二 15:20>
+表象：我最开始在Jetty下使用FreeMarker时，FreeMarker的模板是可以自动加载变更
+的，即当我的Jetty在IDE中运行时，修改.ftl模板文件，不需要重启Jetty就可以自动
+看到修改后在结果。但是最近，我发现这个自动加载的特性失效了。
+
+最后，我发现原来是Templates loading的设置导致的。以前我的设置是从我改成从代
+码的模板文件目录找，所以能够感知模板文件的变动，而后来不知道哪天我设置成从
+target/classes目录里面找了， *由于这是编译目标目录，所以只有触发Java编译才
+能更新它* 。我将这个设置改回，发现问题就解决了，又可以自动加载了。开发效率
+
+拉满。
+** JSP
+JSP感觉是门好古老的技术。看了一下评价，很多人认为JSP不好。
+- [[https://www.zhihu.com/question/51025579][有jsp为什么还要使用freemarker这些模板？ - 知乎]]
+- [[http://www.xwood.net/_site_domain_/_root/5870/5874/t_c255568.html][关于三种jsp、freemarker、velocity模板语言优缺点对比及示例代码演示下载 - 小木人印象]]
+* 引入JS库
+我希望能以Maven依赖的方式引入JS库，而不是像很多其他项目直接拷贝css和js代码。
+我找到了WebJars。
+- [[http://www.webjars.org/][WebJars - Web Libraries in Jars]]
+- [[https://github.com/webjars/sample-jetty_war][webjars/sample-jetty_war]]
+
+- [[https://stackoverflow.com/questions/32138353/can-i-use-maven-to-insert-bootstrap-and-jquery-into-a-java-web-application][Can I use Maven to insert BootStrap and JQuery into a Java web application? - Stack Overflow]]
+- [[https://stackoverflow.com/questions/21812527/how-to-configure-embedded-jetty-webjars][runtime - how to configure embedded jetty + webjars - Stack Overflow]]
+#+BEGIN_SRC javascript
+public class MyResourceHandler extends ResourceHandler {
+    @Override
+    public Resource getResource(String path) {
+        Resource resource = Resource.newClassPathResource("META-INF/resources" + path);
+        if(resource == null) resource = super.getResource(path);
+        return resource;
+    }
+}
+#+END_SRC
+
+** 为了在Jetty中使用WebJars，我踩了不少坑 <2017-10-20 五 21:06>
+记录一下要点：
+1. 扩展ResourceHandler，定向到 ~META-INF/resources~ 目录下。
+2. 使用ContextHandlerCollection，而不是HandlerCollection，也不是HandlerList。使用后两者的话，无法会导致ResourceHandler和ServletHandler冲突。这个地方真是乱七八糟。
+3. 使用ContextHandler封装ResourceHandler，设置好ContextPath。
+4. 使用ServletContextHandler封装ServletHandler，ContextPath。
+5. 最后将ContextHandler和ServletContextHandler添加到ContextHandlerCollection，然后将ContextHandlerCollection设置为Jetty Server的Handler。
+
+参考：
+1. [[https://stackoverflow.com/questions/21812527/how-to-configure-embedded-jetty-webjars][runtime - how to configure embedded jetty + webjars - Stack Overflow]]
+2. [[https://www.eclipse.org/jetty/documentation/9.3.x/resource-handler.html#_improving_the_look_and_feel][Resource Handler]]
+3. [[http://blog.csdn.net/kongxx/article/details/7230080][Jetty实战之 嵌入式Jetty运行Servlet - kongxx的专栏 - CSDN博客]]
+
+* 编写HttpServlet
+1. 通过request.getParameter("xxx")来获取POST的表单字段。
+
+* 测试
+要点：
+1. 启动Jetty Http Server，自动绑定端口号，然后再接下来获得这种端口号，供单测使用。
+2. 使用Jetty自带的HttpClient发起HTTP请求。
+
+- [[https://stackoverflow.com/questions/29758607/how-to-run-jetty-server-for-java-junit-testing][How to run jetty server for java junit testing - Stack Overflow]]
+- [[https://www.eclipse.org/jetty/documentation/9.3.x/http-client-api.html][Jetty HttpClient API Usage]]
