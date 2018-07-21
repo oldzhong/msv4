@@ -1,6 +1,0 @@
-#+TITLE: Apache Ambari
-#+DATE: 2018-03-16 10:07:27
-
-- [[https://github.com/apache/ambari][apache/ambari: Mirror of Apache Ambari]]
-- [[https://cwiki.apache.org/confluence/display/AMBARI/Ambari+Design][Ambari Design - Apache Ambari - Apache Software Foundation]]
-- [[https://cwiki.apache.org/confluence/display/AMBARI/Metrics][Metrics - Apache Ambari - Apache Software Foundation]]
