@@ -1,0 +1,70 @@
+#+TITLE: Java
+#+DATE: 2017-12-01 14:34:48
+
+* Java 8 Stream
+** 使用Stream来一次性判断多个字符串是否为空 <2017-12-01 五 15:10>
+要点：
+1. 使用Stream，实现一行代码处理多个元素。
+2. 使用Guava的Strings::isNullOrEmpty来判断字符串是否为空。
+
+#+BEGIN_SRC java
+Stream<String> strings = Stream.of(transIdStr, inputType, outputType);
+if (strings.anyMatch(Strings::isNullOrEmpty)) {
+    response.getWriter().println("These config: trans_id/input_type/output_type must not be null");
+    response.setStatus(HttpStatus.BAD_REQUEST_400);
+    return;
+}
+#+END_SRC
+
+参考：
+- [[https://github.com/google/guava/issues/2719][Multiple strings in Strings.isNullOrEmpty method · Issue #2719 · google/guava]]
+
+** stream has already been operated upon or closed, class: class java.lang.IllegalStateException <2017-12-01 五 16:59>
+原因：Java中的Stream也是一种流，它是无法被重复使用的。
+
+- [[https://www.evget.com/article/2014/6/18/21196.html][Java 8中10个不易察觉的错误-控件新闻-慧都控件网]]
+* Dropwizard Metrics
+- [[https://github.com/dropwizard/metrics][dropwizard/metrics: Capturing JVM and application-level metrics. So you know what's going on.]]
+
+- [[https://github.com/msteinhoff/dropwizard-grpc][msteinhoff/dropwizard-grpc: A set of classes to use a gRPC server in a Dropwizard service.]]
+- http://msteinhoff.github.io/dropwizard-grpc/
+  
+** 文章
+- [[https://developer.ibm.com/wasdev/docs/collect-metrics-from-liberty-apps-and-display-in-grafana/][Collect metrics from Liberty apps and display in Grafana - WASdev]]
+- [[http://www.klion26.com/2017/05/29/%E4%BB%8E%E6%BA%90%E7%A0%81%E7%BA%A7%E5%88%AB%E5%88%86%E6%9E%90-metric-core-%E7%9A%84%E6%8A%BD%E6%A0%B7%E7%AE%97%E6%B3%95/][从源码级别分析 metric-core 的抽样算法 | klion26]]
+- [[https://caorong.github.io/2016/07/31/hdrhistogram/][谈谈 hdrhistogram 和 metrics | lelouchcr's blog]]
+- http://dimacs.rutgers.edu/~graham/pubs/papers/fwddecay.pdf
+- [[http://wuchong.me/blog/2015/08/01/getting-started-with-metrics/][Metrics 是个什么鬼 之入门教程 | Jark's Blog]]
+  
+讨论：
+- [[https://stackoverflow.com/questions/22803970/metrics-reporting-customization][java - Metrics reporting customization - Stack Overflow]]
+
+** Histograms Reservoir Sampling <2017-12-19 二 17:18>
+直方图用来衡量一个数据集的统计学分布。在大流量场合中，不可能在内存中保留数
+据全集，所以需要抽样。所谓Reservoir Sampling，字面意义就是水库抽样的意思。
+
+#+BEGIN_EXAMPLE
+By maintaining a small, manageable reservoir which is statistically representative of the data stream as a whole, we can quickly and easily calculate quantiles which are valid approximations of the actual quantiles. This technique is called reservoir sampling.
+#+END_EXAMPLE
+   
+- Uniform Reservoirs :: 保证所有数据都有相同是几率被抽样到。
+- Exponentially Decaying Reservoirs ::  关键词：指数权重，最近数据。
+- Sliding Window Reservoirs :: 只保留最近N个数据。
+- Sliding Time Window Reservoirs :: 只保留最近N秒的数据。
+
+** 
+* JMX & Sigar
+我想在Java进程内部获得进程自己的CPU占用，研究了一下JMX。
+- [[http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html][Java Management Extensions (JMX)]]
+- [[https://docs.oracle.com/javase/6/docs/api/java/lang/management/ThreadMXBean.html#getThreadCpuTime(long)][ThreadMXBean (Java Platform SE 6)]]
+- [[https://docs.oracle.com/javase/6/docs/api/java/lang/management/ThreadInfo.html][ThreadInfo (Java Platform SE 6)]]
+- [[https://docs.oracle.com/javase/7/docs/api/java/lang/management/ThreadMXBean.html#getThreadCpuTime(long)][ThreadMXBean (Java Platform SE 7 )]]
+- [[https://stackoverflow.com/questions/40090757/reporting-jvms-cpu-usage-with-dropwizard-metrics][java - Reporting JVM's CPU usage with Dropwizard metrics - Stack Overflow]]
+
+后来又发现了Sigar：
+- [[https://www.cnblogs.com/minkaihui/archive/2014/11/05/4075621.html][Java如何获取系统cpu、内存、硬盘信息 - 闵开慧 - 博客园]]
+* Apache HTTP Client
+- [[http://hc.apache.org/][Apache HttpComponents – Apache HttpComponents]]
+
+** 与市面上其他语言相比，Java的库真是蹩脚 <2018-05-14 一 15:44>
+看样子是一群不是很高明的人做出来的。

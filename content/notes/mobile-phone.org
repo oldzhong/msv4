@@ -1,0 +1,97 @@
+#+TITLE: 手机
+#+DATE: 2017-10-11 13:20:02
+
+* 17年的秋天，想换个手机
+** iPhone 8 Plus
+- [[https://www.dxomark.com/apple-iphone-8-plus-reviewed-best-smartphone-camera-weve-ever-tested/][Apple iPhone 8 Plus reviewed: The best smartphone camera we’ve ever tested - DxOMark]]
+#+BEGIN_EXAMPLE
+96 DxOMark MOBILE PHOTO
+Pros
+One of the best HDR performances of any device we have tested
+Excellent use of face detection to accurately expose faces
+Overall, the best zoom we’ve tested
+Best Bokeh we’ve seen in a mobile device, but still room for improvement
+
+Cons
+Color cast in low and indoor (tungsten) lighting
+Some autofocus issues
+
+89 DxOMark MOBILE VIDEO
+Pros
+Very good stabilization
+Best exposure of any Apple device, but still not industry-leading
+Very good color rendering under almost all lighting condtions
+Good face tracking in bright light
+
+Cons
+Some exposure issues
+Visible noise in low-light conditions
+#+END_EXAMPLE
+
+- [[https://www.zhihu.com/question/65688143][iPhone 8 及 8 Plus 上手体验感如何？ - 知乎]]
+
+- [[http://mobile.yesky.com/131/342076631.shtml?from=baiduvideo][iPhone 8/8 Plus 64GB版够不够用?_天极网]]
+#+BEGIN_EXAMPLE
+当然，首先你需要确认的是你的用途是什么，如果你只是用来听听歌，看看电影，随手拍些照片发朋友圈那64GB完全够用。但如果你对拍摄4K视频有很高的需求，那64GB版就有些吃紧了。
+
+另外值得一提的是，苹果从10S 10.3开始就推出了全新的APFS格式文件系统，新格式对存储卷的利用效率变得更高。另外苹果还在iOS 11中引入了全新的视频和照片文件格式，分别用HEVC(H.265)和HEIF来取代之前的H.264和JPG，他们可以在保留视频和照片高质量的同时，有效地缩小这些多媒体文件的大小，最多可压缩仅一半。
+#+END_EXAMPLE
+
+- [[http://iphone.poppur.com/JiaoCheng/iOS11-HEIF-HEVC.html][iOS11让小容量iPhone更好用：苹果HEVC和HEIF格式是什么？]]
+- [[http://iphone.265g.com/news/166833.html][摄影新变革：iOS11的HEIF不仅是节省空间那么简单 - 265G iPhone频道]]
+- [[https://www.zhihu.com/question/60746038][iOS 11的heif格式照片实际使用体验如何？ - 知乎]]
+#+BEGIN_EXAMPLE
+在iOS 11的发布会上，苹果为iPhone推出了两种全新的媒体格式“HEVC和HEIF”：视频方面使用HEVC来代替H.264，而图片则是用HEIF来代替JPG。这两种格式号称可以在保证画质的情况下，大大减少视频、照片的大小，经常因为容量不足而头疼的朋友将成为最大受益者。
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+最直接的好处就是 iOS 11 设备使用 HEIF 格式拍照后可以节省 50% 的存储空间。在如今对社交网络视频分享的需求越来越多，HEIF 对我们生活最大的好处就是上传和下载速度加快的同时还能保证视频的画质，由于 HEIF 文件大小减半，上传和下载的时间也可以有效地缩减一半。
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+拍的照片无法发微博 听说QQ空间也不行
+直接用微博拍可以发
+编辑于 2017-06-07
+#+END_EXAMPLE
+** 华为Mate 10 <2017-10-18 三 21:50>
+前几天华为Mate 10和Mate 10 Pro发布了，看起来不错。
+- [[https://mm.vmall.com/hwmate10.html][HUAWEI Mate 10系列新品首发]]
+- [[https://zhuanlan.zhihu.com/p/30176835][写在Mate10发布会之后——华为确实领先了…… - 知乎专栏]]
+- [[https://bbs.ngacn.cc/read.php?tid=12647260&_ff=436&page=8][用表格详细对比所有市售835级别机器，mate10/pro是你的菜吗？]]
+- [[http://cn.club.vmall.com/viewthreaduni-14154439-filter-reply-orderby-replies-page-1-1.html][Mate10&Mate10pro 亮点详解，你想知道的都在这里 - 华为Mate10系列机型讨论 花粉俱乐部]]
+
+重要信息：
+1. Mate 10 Pro是Type-C耳机接口，mate10是3.5mm耳机接口
+2. 双卡双待双4G双volte
+3. 神奇的投屏功能了
+4. mate10可以插microSD卡，最大支持扩展256GB。mate10pro不支持sd卡。
+
+*** Mate 10国行发布
+- [[https://bbs.ngacn.cc/read.php?tid=12670455&_ff=436][mate10系列价格公布]]
+  
+Mate 10 Pro的DXO评分也出来了，97分，其中静态照片竟然是100分。评论有质疑DXO
+的公正性的。
+- [[https://www.dxomark.com/huawei-mate-10-pro-oustanding-still-image-performance/][Huawei Mate 10 Pro: Oustanding still image performance - DxOMark]]
+- [[https://bbs.ngacn.cc/read.php?tid=12669940&_ff=436][华为Mate10 pro这是开挂了？DXO拍照测评得分100分，全球排名第一！]]
+
+其他：
+- [[https://bbs.ngacn.cc/read.php?tid=12670801&_ff=436][mate10和mate10pro有什么区别，选哪个？？]]
+- [[https://bbs.ngacn.cc/read.php?tid=12672195&_ff=436][MATE10开箱，普通版黑色比想象中好看]]
+  
+** 入手华为Mate 10！  <2017-10-20 五 18:29>
+通过各方面的了解，我认为华为Mate 10是我需要的手机。今天Mate 10国行版发布，
+18点开卖，我在京东上刷了十几遍，最后抢到了，果断下单。
+
+#+CAPTION: 相机
+[[../static/imgs/mobile-phone/20171020204453.png]]
+#+CAPTION: 网络通信
+[[../static/imgs/mobile-phone/20171020204605.png]]
+#+CAPTION: 影音
+[[../static/imgs/mobile-phone/20171020205036.png]]
+
+** 手机稳定器
+- [[https://www.bilibili.com/video/av9989245/?from=search&seid=7249924778758613732][《值不值得买》第148期：我可能买了个假的DJI——智云Smooth Q_数码_科技_bilibili_哔哩哔哩]]
+- [[http://wearable.yesky.com/smartvideo/471/115117471all.shtml#p115117471][秒变摄影师 智云Smooth Q手机稳定器首测_天极网]]
+
+** Mate 10 相关帖子
+- [[http://bbs.ngacn.cc/read.php?tid=12679713&_ff=436][手机华为MATE10到手，我简单说一下这一代产品相比之前的优劣，少图，多文字。顶楼有更新。]]
