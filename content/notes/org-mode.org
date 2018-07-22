@@ -4,8 +4,7 @@
 #+DESCRIPTION: 知识管理，时间管理
 
 * 资料搜集
-** 相关文章
-+ [[http://www.cnblogs.com/bamanzi/archive/2012/05/12/org-mode-so-powerful.html][为什么说 org-mode 是个神器]]
+** 相关文章 + [[http://www.cnblogs.com/bamanzi/archive/2012/05/12/org-mode-so-powerful.html][为什么说 org-mode 是个神器]]
 + [[http://coldnew.github.io/slides/COSCUP2013_org-mode/slide.html#1][Org-mode: Emacs 下的瑞士軍刀（幻灯片）]]
 
 * 学习 Org-mode 的官方手册
