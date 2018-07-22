@@ -5,7 +5,7 @@ const sharp = require("sharp")
 
 console.log('hehe')
 // const dir = '~/github/elvestar/msv4/public/static'
-const dir = '/Users/elvestar/github/elvestar/msv4/content/static'
+const dir = '/Users/zy/github/elvestar/msv4/content/static'
 const fileType = ['jpg']
 const fileGlobQuery = fileType.map(type => `*.${type}`).join('|')
 const globQuery = `${dir}/imgs/*/${fileGlobQuery}`

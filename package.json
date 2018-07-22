@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elvestar/msv4.git"
+    "url": "git+https://github.com/oldzhong/msv4.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elvestar/msv4/issues"
+    "url": "https://github.com/oldzhong/msv4/issues"
   },
-  "homepage": "https://github.com/elvestar/msv4#readme",
+  "homepage": "https://github.com/oldzhong/msv4#readme",
   "dependencies": {
     "@fancyapps/fancybox": "^3.1.25",
     "bootstrap": "^3.3.7",
@@ -32,6 +32,7 @@
     "highlight.js": "^9.12.0",
     "image-size": "^0.6.1",
     "jquery": "^3.2.1",
+    "node-sass": "^4.9.2",
     "path": "^0.12.7",
     "react-addons-css-transition-group": "^15.6.0",
     "react-grid-gallery": "^0.4.3",
@@ -39,7 +40,7 @@
     "react-images": "^0.5.5",
     "react-lazyload": "^2.2.7",
     "safe-access": "^0.1.0",
-    "sharp": "^0.18.4",
+    "sharp": "^0.20.5",
     "wait.for": "^0.6.6",
     "zoom.js": "git+https://github.com/fat/zoom.js.git"
   }
