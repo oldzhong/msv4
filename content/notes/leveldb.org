@@ -154,3 +154,5 @@ Status DBImpl::Get(const ReadOptions& options,
 }
 #+END_SRC
 ** SequentialFile
+* BloomFilter
+BloomFilter可以确定某个Key一定不在某个Block上。
