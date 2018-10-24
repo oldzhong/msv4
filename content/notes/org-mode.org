@@ -512,6 +512,21 @@ org-clock 系列函数。Org 这样做可能是想模块化，提升加载速度
 在我的机器上，/usr/local/Cellar/emacs/24.3/share/emacs/24.3/lisp/org 目录下面的
 *htmlize.el* 文件负责做代码的着色。如果没找到，则需要下载并拷贝到这下面。
 
+** 时间戳格式从中文变成英文了 <2018-10-19 五 18:40>
+今天下午升级了macOS Majave，升级完后，打开Emacs，开始计时，结果发现时
+间戳中的中文星期变成了英文，如【五】变成了【Fri】。
+
+#+CAPTION: ../static/imgs/org-mode/20181019184213.png
+[[../static/imgs/org-mode/20181019184213.png]]
+
+这导致了不一致，于是我想方设法解决这个问题。最后我找到了解决方案，那就
+是在Emacs配置中加入下面一行：
+#+BEGIN_SRC emacslisp
+(setq system-time-locale "zh_CN")
+#+END_SRC
+
+然后问题解决。看来这次升级Majave过程中，苹果偷偷地做了坏事。
+
 * 回顾
 ** 已经入了门 <2014-02-15 六>
 经过了春节以及前后的集中学习和实践，我已经将 Emacs Org-mode 融入到了我的工作和生活
