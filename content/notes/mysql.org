@@ -369,3 +369,27 @@ django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module: dlope
 经验：
 1. _mysql.so 是pip在安装mysql-python之后通过gcc/clang编译出来的动态链接库。
 2. 长期以来，XCode为Mac用户带来了很多不必要的麻烦。
+** 今天在Mac上折腾安装MySQL花费了一个半小时 <2018-07-26 四 11:45>
+我一开始通过brew install mysql安装mysql，但是后来发现用不了，因为用
+brew安装的是最新8.0版本，而项目的JDBC只能适配5.X版本的mysql。于是我准
+备回退mysql版本，但是总是启动失败。
+
+折腾了很久之后，我决定使用官方的dmg安装包来安装5.6版mysql，但是启动失
+败。我仔细看了一下原因，说是：
+#+BEGIN_SRC sh
+ .\ibdata1 can't be opened in read-write mode
+#+END_SRC
+
+看样子是文件权限导致mysql启动失败的。我将官方dmg安装目录
+~/usr/local/mysql-5.6.40-macos10.13-x86_64/~ 的属主统一改为自己之后，
+发现启动成功。
+
+后来我又发现之前通过brew安装mysql 5.6启动失败可能是因为之前安装mysql 8.0生成的
+~/usr/local/var/mysql/~ 目录的数据格式和5.6版本不兼容导致的。我删除掉
+这个目录，然后使用：
+#+BEGIN_SRC sh
+brew install mysql@5.6
+#+END_SRC
+
+重新安装mysql 5.6后，发现这次启动成功了！
+
