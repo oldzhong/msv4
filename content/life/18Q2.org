@@ -54,7 +54,7 @@
 发现昌平县城市容很是挺好的。
 
 #+caption: 北京东方文昌古玩艺术品交易中心
-[[../static/imgs/18q2/img_20180412_150124.jpg]]
+[[../static/imgs/18Q2/img_20180412_150124.jpg]]
 #+CAPTION: 昌平东关的街道
 [[../static/imgs/18Q2/IMG_20180412_155125.jpg]]
 
