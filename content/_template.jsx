@@ -35,7 +35,7 @@ module.exports = React.createClass({
             <div className="navbar-header">
               <Link className="navbar-brand" to={"/"}>仲之地</Link>
             </div>
-            <div className="navbar-collapse collapse bs-navbar-collapse">
+            <div className="navbar-collapse collapse bs-navbar-collapse" id="header-content">
               <ul className="nav navbar-nav">
                 {/* <li> <Link className="navbar-item" to={"/blog/"}>Blog</Link> </li> */}
                 <li> <Link className="navbar-item" to={"/gallery/"}>Gallery</Link> </li>
@@ -49,6 +49,35 @@ module.exports = React.createClass({
             </div>
           </div>
         </nav>
+        <div>
+              <div id="articleBar-wrapper" id="header-content-2">
+                  <div id="articleBar">
+                      <ul role="tablist">
+                          {/* <li role="presentation" className="active"> */}
+                          <li role="presentation">
+                              {/* <a href="#article" role="tab" data-toggle="tab">article</a> */}
+                              <Link className="navbar-item" to={"/gallery/"}>Gallery</Link>
+                          </li>
+                          <li role="presentation">
+                              <Link className="navbar-item" to={"/notes/"}>笔记</Link>
+                          </li>
+                          <li role="presentation">
+                              <Link className="navbar-item" to={"/archives/"}>归档</Link>
+                          </li>
+                          <li role="presentation">
+                              <Link className="navbar-item" to={"/timeline/"}>时间线</Link>
+                          </li>
+                          <li role="presentation">
+                              <Link className="navbar-item" to={"/reading/notes/"}>读书</Link>
+                          </li>
+                          <li role="presentation">
+                              <Link className="navbar-item" to={"/about/"}>关于</Link>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+
+        </div>
 
         <div className="container m-t">
           {this.props.children}

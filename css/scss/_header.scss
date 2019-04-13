@@ -24,3 +24,19 @@
     line-height: 35px;
   }
 }
+
+#header-content {
+    @media (max-width: 767px) {
+      display: none!important;
+    }
+    @media (min-width: 768px) {
+    }
+}
+
+#header-content-2 {
+    @media (max-width: 767px) {
+    }
+    @media (min-width: 768px) {
+      display: none!important;
+    }
+}
