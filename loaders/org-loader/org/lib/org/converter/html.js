@@ -101,6 +101,17 @@ ConverterHTML.prototype = {
 
   convertHeader: function (node, childText, auxData,
     taskStatus, sectionNumberText) {
+    // 把标题中的事件时间抽取出来放到span里面
+    var re = /^(.+)\s*&#60;(\d{4}.+)&#62;$/;
+    if (re.exec(childText) !== null) {
+      var timeStr = RegExp.$2
+      var eventTitle = RegExp.$1
+      console.log(timeStr )
+      childText = eventTitle + this.inlineTag("span", timeStr, {
+        "class": "event-time"
+      });
+    }
+
     var headerAttributes = {};
 
     if (taskStatus) {
