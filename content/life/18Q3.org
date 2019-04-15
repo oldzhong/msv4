@@ -21,19 +21,9 @@ MacBook Pro也确实需要一个升级了。
 - [[https://bbs.ngacn.cc/read.php?tid=14488849][苹果更新MacBook Pro 2018款]]
 - [[https://bbs.ngacn.cc/read.php?tid=14488964][macbook pro更新了，换8代cpu]]
 - [[http://tieba.baidu.com/p/5792689884][【图片】【新闻】MacBook Pro 2018来了—— 8 代 U 与 32G 内存梦想成真【macbook_百度贴吧]]
+- [[https://www.macx.cn/thread-2214991-1-1.html][【原创 视频】MacBook Pro 2018 如何选购 ？-麦克叉,新闻,讨论,活动-MacX.cn]]
+- [[http://tieba.baidu.com/p/5795044223][【图片】精简总结一下新款MacBook Pro 2018【macbook_百度贴吧]]
 
-* 入手MBP15三日感 <2018-07-24 二 01:48>
-新MBP15用起来感觉非常棒，这么大的屏幕、这么高的运算能力给我带来的感觉
-就是：真够用。我已经无法回到13寸屏幕的那个年代了。回想一下这几天，真是
-如同梦幻。新MBP发布其实没几天，我仿佛是未经思考的一般，不知不觉就把15
-寸高配给拎回家了。
-
-#+CAPTION: 马连洼地铁站附近的晚霞
-[[../static/imgs/18Q3/IMG_20180720_191337-02.jpg]]
-#+CAPTION: 中关村大街
-[[../static/imgs/18Q3/DSC00094.jpg]]
-#+CAPTION: 新MBP15开箱照
-[[../static/imgs/18Q3/DSC00112.jpg]]
 
 * 罕见地感受到了对照相设备的满意 <2018-07-24 二 01:50>
 前几天买了A7R3和FE35 2.8。上周末拿着A7R3和FE55以及FE24-240去马路对面的

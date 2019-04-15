@@ -106,7 +106,6 @@ ConverterHTML.prototype = {
     if (re.exec(childText) !== null) {
       var timeStr = RegExp.$2
       var eventTitle = RegExp.$1
-      console.log(timeStr )
       childText = eventTitle + this.inlineTag("span", timeStr, {
         "class": "event-time"
       });
@@ -243,8 +242,8 @@ ConverterHTML.prototype = {
       var imgText = this.getNodeTextContent(node);
       var imgSrc = node.src
       if (imgSrc.indexOf('../static/') == 0) {
-        // imgSrc = imgSrc.replace('../static/', '/static/')
-        imgSrc = imgSrc.replace('../static/', 'https://msv4.cdn.bcebos.com/static/')
+        imgSrc = imgSrc.replace('../static/', '/static/')
+        // imgSrc = imgSrc.replace('../static/', 'https://msv4.cdn.bcebos.com/static/')
       }
       fields = imgSrc.split('/')
       fields.splice(fields.length - 1, 0, 'small')
