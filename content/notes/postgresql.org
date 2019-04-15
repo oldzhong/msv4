@@ -1,0 +1,43 @@
+#+TITLE: PostgreSQL
+#+DATE: 2019-01-12 16:02:18
+
+* 资料收集
+- [[https://www.postgresql.org/docs/11/index.html][PostgreSQL: Documentation: 11: PostgreSQL 11.1 Documentation]]
+- [[http://wap.sciencenet.cn/blog-1225851-841512.html?mobile=1][科学网- 转载计算机科学名人堂：Michael Stonebraker-王小平的博文]]
+
+  
+* 阅读PostgreSQL 11.1文档
+PostgreSQL是一种对象-关系型数据库管理系统（ORDBMS），基于伯克利大学开
+发的POSTGRES Version 4.2开发，它支持大部分SQL标准，并提供了很多现代特
+性：
+- complex queries
+- foreign keys
+- triggers
+- updatable views
+- transactional integrity
+- multiversion concurrency control
+
+本节介绍了如何登陆数据库：psql template1
+- [[https://www.postgresql.org/docs/11/tutorial-accessdb.html][PostgreSQL: Documentation: 11: 1.4. Accessing a Database]]
+
+  
+**  The SQL Language
+建表语句：
+#+BEGIN_SRC sql
+CREATE TABLE weather (
+    city            varchar(80),
+    temp_lo         int,           -- low temperature
+    temp_hi         int,           -- high temperature
+    prcp            real,          -- precipitation
+    date            date
+);
+#+END_SRC
+
+插入数据（文档里说这叫Populating a Table With Rows）：
+#+BEGIN_SRC sql
+INSERT INTO weather VALUES ('San Francisco', 46, 50, 0.25, '1994-11-27');
+INSERT INTO weather (city, temp_lo, temp_hi, prcp, date)
+    VALUES ('San Francisco', 43, 57, 0.0, '1994-11-29');
+#+END_SRC
+
+看起来用法和其他数据库类似。

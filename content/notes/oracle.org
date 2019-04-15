@@ -1,0 +1,48 @@
+#+TITLE: Oracle Database
+#+DATE: 2019-03-06 17:39:32
+
+* 资料收集
+- [[https://docs.oracle.com/en/database/oracle/oracle-database/index.html][Oracle Database Documentation - Oracle Database]]
+
+* 数据并发性和一致性 <2019-03-06 三 17:41>
+- [[https://docs.oracle.com/cd/E25054_01/server.1111/e25789/consist.htm][Data Concurrency and Consistency - 11g Release 2 (11.2)]]
+- Data concurrency :: which ensures that users can access data at the same time
+- Data consistency :: which ensures that each user sees a consistent view of the data, including visible changes made by the user's own transactions and committed transactions of other users
+
+To describe consistent transaction behavior when transactions run
+concurrently, database researchers have defined a transaction
+isolation model called *serializability*. A serializable transaction
+operates in an environment that makes it appear as if no other users
+were modifying data in the database.
+
+In short, real-world considerations usually require a compromise
+between perfect transaction isolation and performance.
+在交易隔离性和性能之间做妥协。
+
+Oracle Database maintains data consistency by using a *multiversion
+consistency model* （多版本一致性模型） and various types of locks and
+transactions. In this way, the database can present a view of data to
+multiple concurrent users, with each view consistent to a point in
+time. Because different versions of data blocks can exist
+simultaneously, transactions can read the version of data committed at
+the point in time required by a query and return results that are
+consistent to a single point in time.
+
+- Multiversion Read Consistency :: Oracle永远准许dirty reads，此外
+     Oracle的Readers和Writers互相之间不会block。
+- Statement-Level Read Consistency :: 
+- Transaction-Level Read Consistency :: 一个交易中的所有语句看到的都是
+     同一时间点的数据，就是交易开始那个时间点。但是该交易的内部，前一
+     个语句更新数据之后，后一个语句是可以看到改动的。
+
+
+** 为啥Oracle没有nolock，而SQL Server和MySQL等却有nolock？
+- [[https://dba.stackexchange.com/questions/149350/why-oracle-doesnt-have-nolock][sql server - Why Oracle doesn't have nolock? - Database Administrators Stack Exchange]]
+  
+参考Oracle文档的Locking行为总结：[[https://docs.oracle.com/cd/E25054_01/server.1111/e25789/consist.htm#BABHIGGC][Data Concurrency and Consistency - 11g Release 2 (11.2)]]
+- A row is locked only when modified by a writer.
+- A writer of a row blocks a concurrent writer of the same row.
+- A reader never blocks a writer.
+- A writer never blocks a reader.
+
+
