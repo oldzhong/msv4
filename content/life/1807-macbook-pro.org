@@ -1,4 +1,4 @@
-#+TITLE: 入手 2018 款 MacBook Pro 15寸高配
+#+TITLE: 入手 2018 款 MacBook Pro
 #+DATE: 2018-07-20
 
 
@@ -17,11 +17,11 @@
 [[../static/imgs/1807-macbook-pro/IMG_20180720_191337-02.jpg]]
 #+CAPTION: 中关村大街
 [[../static/imgs/1807-macbook-pro/DSC00094.jpg]]
-#+CAPTION: 新MBP15开箱照
-[[../static/imgs/1807-macbook-pro/DSC00112.jpg]]
 
 取回家后，就是开箱，开机。感觉这个15寸新版比13寸旧版也重不了多
 少。
+#+CAPTION: 新MBP15开箱照
+[[../static/imgs/1807-macbook-pro/DSC00112.jpg]]
 
 周末我花了几天的将各种软件、数据、照片、配置等迁移到新Mac上，整理这几
 年的工作真是费心费力。
