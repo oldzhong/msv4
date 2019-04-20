@@ -18,6 +18,19 @@ defaults write com.apple.screencapture type jpg && killall SystemUIServer
 参考：
 - [[http://www.ifanr.com/app/546621][一篇文章，解决 Mac 截图的所有问题 | 领 客专栏·Mac 玩儿法 | 爱范儿]]
 - [[https://my.oschina.net/moooofly/blog/300384][【转载】为什么软件界面截图不存为jpg 而推荐png？ - 摩云飞的个人页面 - 开源中国社区]]
+
+** 不要展示截屏后的悬浮缩略图 <2019-04-20 六 09:05>
+我在看剧截屏的时候，右下角老是出现刚才所截之图的缩略图，悬浮较长时间，
+影响我的下一次截图。我网上搜索一下，在官网的帮助文档里找到了如何去掉缩
+略图悬浮展示的方法：
+- [[https://support.apple.com/zh-cn/HT201361#thumbnail][如何在 Mac 上拍摄屏幕快照 - Apple 支持]]
+  
+具体就是按一下Shift-Command (⌘)-5，这时会出现全新的截图界面，里面有个
+选项，在这里面可以设置是否显示浮动缩略图。
+#+BEGIN_EXAMPLE
+在 macOS Mojave 中，在键盘上按下 Shift-Command (⌘)-5 即可看到用于对屏幕捕捉静态图像和录制视频的所有控制项。使用屏幕上的这些控制项可以选择是要捕捉整个屏幕、捕捉某个窗口、捕捉选定的部分还是录制屏幕。（要捕捉触控栏上的内容，请继续使用 Shift-Command-6。）
+#+END_EXAMPLE
+
 * 在终端中打开Finder
 #+BEGIN_SRC sh
 open .
