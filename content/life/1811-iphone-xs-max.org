@@ -1,0 +1,100 @@
+#+TITLE: 入手 iPhone XS Max
+#+DATE: 2018-11-12
+
+华为Mate10用了一年了，越来越不喜欢它了。
+
+上个月iPhone XS发布了，但是我不喜欢。我觉得XS续航太低，不支持双卡，而
+XS Max又太大太重，并且有点贵。我觉得XR还可以。
+1. 适中的照片体积，恰到好处的测光和白平衡，没有过分美化的自拍。
+2. 更方便的照片导入，如果买了128GB版本的话，照片可以在收集留存一份。
+3. 日程提醒，让我不会遗漏任何事情。和Mac、Apple Watch的各种互通等。
+4. 趁手的体积，美好的握持感。
+5. 玩王者荣耀不卡。
+6. 隐私！隐私！隐私！
+
+前几天华为Mate 20发布了，一口气发发布了三款，其中Mate 20 Pro和Mate 20
+X让我感到很惊艳。Mate 20 Pro简直是当今各种黑科技的集合体，尤其是那个逆
+天的三摄，而Mate 20 X更是把大屏大电池发挥到了极致。
+
+#+CAPTION: 华为 Mate20 系列
+[[../static/imgs/1811-iphone-xs-max/mate20.jpg]]
+
+后来华为又在国内搞了个Mate 20的发布会，我竟然熬夜三小时看完了，收获了
+很多惊喜。如下：
+1. 超大CMOS，达到1/1.7，真让我惊讶。索尼RX100也不过才1英寸。
+2. 不再需要HiSuite，通过网上邻居直接无线同步照片到Mac。这点太关键了！
+3. 指关节截图：双叩直接截图，写S长截屏，画圈区域截屏等。
+4. 华为手机充当遥控器，甚至可以控制我家的三个空调（我试了一下，果然行！）
+5. 华为钱包支持替代公交卡、门禁卡等等。
+
+我有种感觉：现在的华为可以比作五六年前的苹果，代表着当今数码产品的最强
+科技力。尤其在重量控制、电池续航、移动信号这些坚硬的指标上，华为很有一
+套，这些事实让我不得不在此吹一波。
+
+于是我准备去定Mate20 Pro，结果发现已经订不到了。通过在论坛上的了解，我
+发现到手遥遥无期。
+
+于是我决定退而求其次，去看看iPhone。之前想买iPhone XR，尤其是看了刚刚
+我看了B站《搞机零距离》的iPhone XR上手视频，感觉iPhone XR还挺精致的，
+比苹果官网上的产品图可口很多，尤其是那个深红色。
+- [[https://www.bilibili.com/video/av34103164/][搞机零距离：iPhone XR体验 六款彩虹色哪个最适合你？_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili]]
+
+#+CAPTION: iPhone XR
+[[../static/imgs/1811-iphone-xs-max/iphone-xr.jpg]]
+
+* 入手和开箱
+
+前天是双十一前夕，下午的时候微信推送了一条信息：联通王卡搞活动，价格不
+错，还赠送腾讯视频VIP、QQ音乐VIP、王卡话费等。晚上的时候我去小区附近的
+商场现场体验了一下iPhone XR以及iPhone XS Max，我发现XR很棒，Product
+RED尤其精美，但是它也有明显的缺点，就是有点厚重。作为苹果的产品，XR不
+够精致。
+
+#+CAPTION: XR vs. XSM
+[[../static/imgs/1811-iphone-xs-max/IMG_20181110_145758.jpg]]
+
+
+于是我改变了注意，在联通处下单购买了iPhone XS Max 256GB 金色版。
+
+今天我的iPhone就到了，去楼下取了快递，拿到工位。晚上下班回家后，进行了开箱。
+#+CAPTION: XSM的快递到了
+[[../static/imgs/1811-iphone-xs-max/IMG_20181112_141654.jpg]]
+
+#+CAPTION: XSM开箱
+[[../static/imgs/1811-iphone-xs-max/LRG_DSC01882.jpg]]
+
+开箱的过程我录制了一段视频，上传到了B站：
+- [[https://www.bilibili.com/video/av36261293][iPhone Xs Max 开箱_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili]]
+  
+开机后，我拍的第一张照片是我的华为Mate10，还有拍摄开箱视频用的三脚架：
+#+CAPTION: XSM的第一张照片：告别Mate 10
+[[../static/imgs/1811-iphone-xs-max/IMG_0005.jpg]]
+#+CAPTION: XSM的第二张照片：告别Mate 10
+[[../static/imgs/1811-iphone-xs-max/IMG_0006.jpg]]
+
+#+CAPTION: 手机桌面截图
+[[../static/imgs/1811-iphone-xs-max/IMG_0001.jpg]]
+#+CAPTION: 登录王者荣耀（快一年多没登录了）
+[[../static/imgs/1811-iphone-xs-max/IMG_0018.jpg]]
+
+  
+使用感受：
+- 很宽
+- 续航不及预期，早出晚归的话，电量肯定不够用。
+- 照片管理很方便，我还升级了221GB的iCloud存储套餐。
+- 照片编辑功能很强大。
+  
+* 西山森林公园使用XSM <2018-11-17 六>
+XSM的智能HDR非常强大，远摄镜头画质也堪用。但是暗光拍摄很普通，远逊于华
+为。目前感觉：满意。
+
+#+CAPTION: 逆光下的智能HDR表现惊艳
+[[../static/imgs/1811-iphone-xs-max/IMG_0051.jpg]]
+#+CAPTION: 远摄镜头画质好于预期
+[[../static/imgs/1811-iphone-xs-max/IMG_0061.jpg]]
+#+CAPTION: 山上池塘
+[[../static/imgs/1811-iphone-xs-max/IMG_0067.jpg]]
+#+CAPTION: 通往鬼笑石
+[[../static/imgs/1811-iphone-xs-max/IMG_0109.jpg]]
+#+CAPTION: 下山之路
+[[../static/imgs/1811-iphone-xs-max/IMG_0121.jpg]]
