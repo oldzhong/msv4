@@ -1,0 +1,41 @@
+#+TITLE: Java REST
+#+DATE: 2018-10-05 21:22:03
+
+
+* 资料收集
+API设计相关：
+- [[https://cloud.google.com/apis/design/][API Design Guide  |  Cloud APIs  |  Google Cloud]]
+
+Jesery和JAX-RS相关：
+- [[https://jersey.github.io/documentation/latest/index.html][Jersey 2.27 User Guide]]
+- [[https://docs.oracle.com/javaee/6/tutorial/doc/gkkrb.html][Annotations for Field and Bean Properties of Resource Classes - The Java EE 6 Tutorial]]
+- [[https://www.ibm.com/developerworks/cn/java/j-lo-jaxrs/index.html][使用 JAX-RS 简化 REST 应用开发]]
+- [[http://www.infoq.com/cn/articles/springmvc_jsx-rs][Spring MVC与JAX-RS比较与分析]]
+- [[https://dennis-xlc.gitbooks.io/restful-java-with-jax-rs-2-0-en/content/en/index.html][Introduction | RESTful Java with JAX-­RS 2.0­]]
+
+gson相关：
+- [[https://github.com/google/gson][GitHub - google/gson: A Java serialization/deserialization library to convert Java Objects into JSON and back]]
+- [[https://www.jianshu.com/p/e740196225a4][你真的会用Gson吗?Gson使用指南（一） - 简书]]
+
+  
+* 单元测试
+* 问题记录
+** 如何在JAX-RS中获得HttpServletRequest？ <2019-03-09 六 15:44>
+方法：使用@javax.ws.rs.core.Context注解。实例代码：
+#+BEGIN_SRC java
+@Path("/api/v3/xxx")
+@Api(value = "XXXResource", description = "数据源配置")
+public class XXXResource {
+    @GET
+    @ApiOperation(value = "XXX")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getXXXs(
+            @Context HttpServletRequest request,
+            @QueryParam("query") String query) {
+    }
+}
+#+END_SRC
+
+参考：
+- [[https://stackoverflow.com/questions/9612194/get-httpservletrequest-in-jax-rs-appfuse-application][java - Get HttpServletRequest in Jax Rs / Appfuse application? - Stack Overflow]]

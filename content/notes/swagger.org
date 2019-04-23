@@ -1,0 +1,22 @@
+#+TITLE: Swagger
+#+DATE: 2018-10-05 21:12:41
+
+
+* 资料收集
+- [[https://swagger.io/][The Best APIs are Built with Swagger Tools | Swagger]]
+- [[https://swagger.io/tools/swagger-ui/][Swagger UI | API Development Tools | Swagger]]
+- [[https://github.com/swagger-api/swagger-core/wiki/annotations][Annotations · swagger-api/swagger-core Wiki]]
+
+
+* Swagger UI
+Swagger UI用来轻易地实现API的可视化和可交互化，同时面向API开发者和API
+的使用者。
+
+* 问题记录
+** Unrecognized Type: [simple type, class xxx] <2019-03-06 三 10:59>
+例如：Unrecognized Type: [simple type, class javax.ws.rs.core.Response]
+
+被折腾了好几个小时。网上查了一下，说可能是jackson版本冲突导致的。
+- [[https://groups.google.com/forum/#!topic/swagger-swaggersocket/ERohKrCKHtI][Java Swagger-core 1.5.0, swagger-jersey2-jaxrs 1.5.0 Unrecognized return type for models - Google 网上论坛]]
+
+解决方法：在pom.xml中显式指定jackson的版本。
