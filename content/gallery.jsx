@@ -38,6 +38,10 @@ export default class Gallery extends React.Component {
                     </div>
                     <div className="image">
                         <div className="image-overlay"></div>
+                        <a className="fancybox" data-fancybox="images" href="https://msv4.cdn.bcebos.com/static/imgs/17Q3/IMG_0379.jpg" title="太极形状的云" rel="https://msv4.cdn.bcebos.com/static/imgs/17Q3/IMG_0379.jpg"><img src="https://msv4.cdn.bcebos.com/static/imgs/17Q3/small/IMG_0379.jpg" alt="洛丹伦的夏天" title="洛丹伦的夏天" data-width="1024" data-height="768" /></a>
+                    </div>
+                    <div className="image">
+                        <div className="image-overlay"></div>
                         <a className="fancybox" data-fancybox="images" href="https://msv4.cdn.bcebos.com/static/imgs/17Q3/IMG_0333.jpg" title="稻香湖的荷花" rel="https://msv4.cdn.bcebos.com/static/imgs/17Q3/IMG_0333.jpg"><img src="https://msv4.cdn.bcebos.com/static/imgs/17Q3/small/IMG_0333.jpg" alt="稻香湖的荷花" title="稻香湖的荷花" data-width="1024" data-height="768" /></a>
                     </div>
                     <div className="image">
