@@ -22,6 +22,10 @@
 少。
 #+CAPTION: 新MBP15开箱照
 [[../static/imgs/1807-macbook-pro/DSC00112.jpg]]
+#+CAPTION: 新MBP15开箱照
+[[../static/imgs/1807-macbook-pro/DSC00117.jpg]]
+#+CAPTION: 键盘特写
+[[../static/imgs/1807-macbook-pro/DSC00118.jpg]]
 
 周末我花了几天的将各种软件、数据、照片、配置等迁移到新Mac上，整理这几
 年的工作真是费心费力。

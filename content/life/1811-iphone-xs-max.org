@@ -57,7 +57,11 @@ Product RED尤其精美，但是它也有明显的缺点，就是有点厚重。
 #+CAPTION: XSM的快递到了
 [[../static/imgs/1811-iphone-xs-max/IMG_20181112_141654.jpg]]
 #+CAPTION: XSM开箱
-[[../static/imgs/1811-iphone-xs-max/LRG_DSC01882.jpg]]
+[[../static/imgs/1811-iphone-xs-max/DSC01879.jpg]]
+#+CAPTION: XSM开箱
+[[../static/imgs/1811-iphone-xs-max/DSC01882.jpg]]
+#+CAPTION: XSM开箱
+[[../static/imgs/1811-iphone-xs-max/DSC01883.jpg]]
 
 开箱的过程我录制了一段视频，上传到了B站：
 - [[https://www.bilibili.com/video/av36261293][iPhone Xs Max 开箱_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili]]
