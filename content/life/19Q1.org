@@ -31,6 +31,38 @@ APS-C变焦，这两者的直出都很棒且都很轻便，还能兼顾到画质
 
 我知道X-T30轻巧，但没想到它竟然如此轻巧！
 
+* 一些北京西站、晓月楼和莲花池的记忆 <2019-03-14 四>
+一些记忆吧。
+#+CAPTION: 晓月楼
+[[../static/imgs/19Q1/IMG_3333.jpg]]
+#+CAPTION: 北京西站
+[[../static/imgs/19Q1/IMG_3345.jpg]]
+#+CAPTION: 莲花池公园
+[[../static/imgs/19Q1/IMG_3376.jpg]]
+
+* 水长城徒步18公里达成！<2019-03-16 六>
+#+CAPTION: 水长城门口广场
+[[../static/imgs/19Q1/IMG_3409.jpg]]
+#+CAPTION: 清澈的冰水
+[[../static/imgs/19Q1/IMG_3437.jpg]]
+#+CAPTION: 这段长城极为陡峭
+[[../static/imgs/19Q1/DSC02407.jpg]]
+#+CAPTION: 徒步终点
+[[../static/imgs/19Q1/IMG_3521.jpg]]
+
+
+* 周日去西郊宾馆K歌 <2019-03-17 日>
+这里价格真便宜。完后我们去五道口的明洞邦吃韩国餐，炸鸡很好吃，让我想起
+了今年元旦。
+#+CAPTION: 西郊宾馆
+[[../static/imgs/19Q1/IMG_3558.jpg]]
+#+CAPTION: 明洞邦
+[[../static/imgs/19Q1/IMG_3569.jpg]]
+
+#+CAPTION: 
+[[../static/imgs/19Q1/.jpg]]
+#+CAPTION: 
+[[../static/imgs/19Q1/.jpg]]
 
 * 996.ICU <2019-03-28 四 14:51>
 - https://github.com/996icu/996.ICU
