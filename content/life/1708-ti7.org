@@ -1,5 +1,6 @@
 #+TITLE: TI7
 #+DATE: 2017-08-05 14:57:55
+#+CATEGORY: unpublished
 
 * 相当孝顺的比赛
 小组赛IGV打Fnatic的第一场，IGV选了蚂蚁竟然输给了A组最弱的Fnatic。

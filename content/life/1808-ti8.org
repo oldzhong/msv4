@@ -1,5 +1,6 @@
 #+TITLE: TI8
 #+DATE: 2018-08-23 16:57:23
+#+CATEGORY: unpublished
 
 小组赛没有看，淘汰赛才开始看。最近几月忙于工作忙于生活，好久没看DOTA比
 赛，感觉就像是遇见一个已经逐渐生疏的朋友一样。
@@ -17,7 +18,7 @@
 - https://www.reddit.com/r/DotA2/comments/99l8ht/lgd_whos_going_to_die_next_its_eehhh/
 
 #+CAPTION: LGD的胜者组之路
-[[../static/imgs/1808-ti8/20180823165800.jpd]]
+[[../static/imgs/1808-ti8/20180823165800.jpg]]
 * 大爹的复仇
 * 败者组三幻神
 * 凌晨一点赶快上床睡觉
