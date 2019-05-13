@@ -242,7 +242,7 @@ ConverterHTML.prototype = {
       var imgText = this.getNodeTextContent(node);
       var imgSrc = node.src
       if (imgSrc.indexOf('../static/') == 0) {
-        imgSrc = imgSrc.replace('../static/', '/static/')
+        // imgSrc = imgSrc.replace('../static/', '/static/')
         imgSrc = imgSrc.replace('../static/', 'https://msv4.cdn.bcebos.com/static/')
       }
       fields = imgSrc.split('/')
