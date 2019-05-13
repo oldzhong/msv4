@@ -11,33 +11,33 @@
 * 出海
 #+CAPTION: 海鸥
 [[../static/imgs/1905-chang-dao/DSC01994.jpg]]
-#+CAPTION: DSC02262.jpg
+#+CAPTION: 海上浮标、渔船和村落
 [[../static/imgs/1905-chang-dao/DSC02262.jpg]]
-#+CAPTION: DSC02270.jpg
+#+CAPTION: 一队海鸥
 [[../static/imgs/1905-chang-dao/DSC02270.jpg]]
-#+CAPTION: DSC02278.jpg
+#+CAPTION: 远眺九丈崖
 [[../static/imgs/1905-chang-dao/DSC02278.jpg]]
-#+CAPTION: DSC02286.jpg
+#+CAPTION: 一只海鸥
 [[../static/imgs/1905-chang-dao/DSC02286.jpg]]
-#+CAPTION: DSC02299.jpg
+#+CAPTION: 海鸥玩水
 [[../static/imgs/1905-chang-dao/DSC02299.jpg]]
-#+CAPTION: DSC02306.jpg
+#+CAPTION: 海鸥
 [[../static/imgs/1905-chang-dao/DSC02306.jpg]]
-#+CAPTION: DSC02329.jpg
+#+CAPTION: 一群海鸥
 [[../static/imgs/1905-chang-dao/DSC02329.jpg]]
-#+CAPTION: DSC02348.jpg
+#+CAPTION: 万鸟岛
 [[../static/imgs/1905-chang-dao/DSC02348.jpg]]
-#+CAPTION: DSC02369.jpg
+#+CAPTION: 逆光的海鸥
 [[../static/imgs/1905-chang-dao/DSC02369.jpg]]
-#+CAPTION: DSC02390.jpg
+#+CAPTION: 尾行的海鸥
 [[../static/imgs/1905-chang-dao/DSC02390.jpg]]
-#+CAPTION: DSC02396.jpg
+#+CAPTION: 尾随的海鸥
 [[../static/imgs/1905-chang-dao/DSC02396.jpg]]
 #+CAPTION: 庙岛
 [[../static/imgs/1905-chang-dao/DSC02405.jpg]]
 #+CAPTION: 庙岛
 [[../static/imgs/1905-chang-dao/DSC02412.jpg]]
-#+CAPTION: DSC02419.jpg
+#+CAPTION: 庙岛港口的渔船
 [[../static/imgs/1905-chang-dao/DSC02419.jpg]]
 #+CAPTION: 海神01号
 [[../static/imgs/1905-chang-dao/DSC02424.jpg]]
@@ -45,43 +45,43 @@
 [[../static/imgs/1905-chang-dao/DSC02429.jpg]]
 
 * 林海公园
-#+CAPTION: DSC02455.jpg
+#+CAPTION: 长山尾
 [[../static/imgs/1905-chang-dao/DSC02455.jpg]]
-#+CAPTION: DSC02495.jpg
+#+CAPTION: 海路
 [[../static/imgs/1905-chang-dao/DSC02495.jpg]]
-#+CAPTION: DSC02572.jpg
+#+CAPTION: 海边栈道
 [[../static/imgs/1905-chang-dao/DSC02572.jpg]]
-#+CAPTION: DSC02582.jpg
+#+CAPTION: 林海之巅
 [[../static/imgs/1905-chang-dao/DSC02582.jpg]]
-#+CAPTION: DSC02583.jpg
+#+CAPTION: 渤海黄海交汇处
 [[../static/imgs/1905-chang-dao/DSC02583.jpg]]
-#+CAPTION: DSC02590.jpg
+#+CAPTION: 林海之北
 [[../static/imgs/1905-chang-dao/DSC02590.jpg]]
 
 * 月牙湾和九丈崖
-#+CAPTION: DSC02609.jpg
+#+CAPTION: 月牙湾山顶
 [[../static/imgs/1905-chang-dao/DSC02609.jpg]]
-#+CAPTION: DSC02615.jpg
+#+CAPTION: 圆石上的皮皮虾和海星
 [[../static/imgs/1905-chang-dao/DSC02615.jpg]]
-#+CAPTION: DSC02627.jpg
+#+CAPTION: 海边的人
 [[../static/imgs/1905-chang-dao/DSC02627.jpg]]
-#+CAPTION: DSC02681.jpg
+#+CAPTION: 礁石上的一只鸟
 [[../static/imgs/1905-chang-dao/DSC02681.jpg]]
-#+CAPTION: DSC02682.jpg
+#+CAPTION: 月牙湾东部海岸
 [[../static/imgs/1905-chang-dao/DSC02682.jpg]]
-#+CAPTION: DSC02687.jpg
+#+CAPTION: 海边礁石
 [[../static/imgs/1905-chang-dao/DSC02687.jpg]]
-#+CAPTION: DSC02690.jpg
+#+CAPTION: 礁石上的海菜
 [[../static/imgs/1905-chang-dao/DSC02690.jpg]]
-#+CAPTION: DSC02711.jpg
+#+CAPTION: 海边的人
 [[../static/imgs/1905-chang-dao/DSC02711.jpg]]
 #+CAPTION: 月牙湾全景
 [[../static/imgs/1905-chang-dao/DSC02715.jpg]]
-#+CAPTION: DSC02722.jpg
+#+CAPTION: 月牙湾西部海岸
 [[../static/imgs/1905-chang-dao/DSC02722.jpg]]
-#+CAPTION: DSC02732.jpg
+#+CAPTION: 月牙湾北部海面
 [[../static/imgs/1905-chang-dao/DSC02732.jpg]]
-#+CAPTION: DSC02733.jpg
+#+CAPTION: 礁石上的人
 [[../static/imgs/1905-chang-dao/DSC02733.jpg]]
 #+CAPTION: 九丈崖的日落
 [[../static/imgs/1905-chang-dao/DSC02761.jpg]]
