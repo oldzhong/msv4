@@ -76,7 +76,7 @@ Product RED尤其精美，但是它也有明显的缺点，就是有点厚重。
 然后开始使用，初步感受是机身有点宽，如果它能像Mate 20 Pro那样纤细就好了。
 #+CAPTION: 手机桌面截图
 [[../static/imgs/1811-iphone-xs-max/IMG_0001.jpg]]
-#+CAPTION: 登录王者荣耀（快一年多没登录了）
+#+CAPTION: 登录王者荣耀（快一年没登录了）
 [[../static/imgs/1811-iphone-xs-max/IMG_0018.jpg]]
   
 * 西山森林公园使用XSM <2018-11-17 六>
