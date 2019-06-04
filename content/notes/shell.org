@@ -230,7 +230,6 @@ glob 库。此外，SQL 下也有类似 glob patterns 的东西，就是写法�
 - https://en.wikipedia.org/wiki/Glob_(programming)
 - [[https://www.tcl.tk/man/tcl8.5/tutorial/Tcl16a.html][Simple pattern matching - "globbing" (tcl8.5)]]
 
-* date
 * 问题记录
 ** Find file then cd to that directory in Linux <2017-10-18 三 14:16>
 方法就是使用Shell下的dirname命令。
