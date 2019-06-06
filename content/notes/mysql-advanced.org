@@ -1,0 +1,9 @@
+#+TITLE: MySQL binlog
+#+DATE: 2019-05-23 11:51:19
+
+* 资料收集
+- [[https://github.com/shyiko/mysql-binlog-connector-java][GitHub - shyiko/mysql-binlog-connector-java: MySQL Binary Log connector]]
+- [[https://zhuanlan.zhihu.com/p/33504555][腾讯工程师带你深入解析 MySQL binlog - 知乎]]
+  
+* MySQL binlog
+
