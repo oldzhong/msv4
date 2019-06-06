@@ -1,0 +1,120 @@
+#+TITLE: Prometheus: Monitoring system & time series database
+#+DATE: 2019-06-02 11:29:48
+
+Prometheus是一个开源的系统监控和报警的工具集。它开始于2012年。它的主要
+特性有：
+1. 一个多维度的数据模型（multi-dimensional data model），它是以指标名和KV作为标识的时间序列数据（time series data）
+2. PromQL，一种弹性查询语言（lexible query language ）来Hold住这些维度（leverage this dimensionality）
+3. 不依赖分布式存储，单服务器节点是自治的（autonomous）
+4. 时序数据的收集是采用HTTP Pull（pull model over HTTP）的模式
+5. 支持通过中间网关（intermediary gateway）来推送时序数据
+6. 可以通过服务发现（service discovery）或静态配置来发现目标（targets）
+7. 支持多模式的图表和面板
+   
+Prometheus生态包括了多种组件，其中很多都是可选的。
+1. Prometheus主服务器，用来搜刮（scrapes）和存储时序数据
+2. 客户端程序库，用来instrumenting application code
+3. 一个 push gateway，用来支持短期任务的监控收集
+4. 特定目的导出工具，用来支持HAProxy、StatsD、Graphite之类的服务
+5. 一个用来处理报警的alertmanager
+6. 各种这样的支持工具
+
+大部分Prometheus组件都是用Go语言写的，所以他们易于部署，就像是静态
+binaries一样。
+
+Prometheus及其生态下的一些组件的架构图如下：
+#+CAPTION: The architecture of Prometheus
+[[../static/imgs/prometheus/architecture.png]]
+
+* 资料收集
+- [[https://prometheus.io/][Prometheus - Monitoring system & time series database]]
+
+* 安装使用
+在官网下载：[[https://prometheus.io/download/][Download | Prometheus]] ，得到安装包
+prometheus-2.10.0.darwin-amd64.tar.gz。然后：
+1. 解压：tar xvfz prometheus-*.tar.gz
+2. 切换目录：cd prometheus-*
+3. 配置：
+4. 启动：./prometheus --config.file=prometheus.yml
+5. 访问：http://localhost:9090/
+
+* 概念 CONCEPTS
+** 数据模型 DATA MODEL
+- [[https://prometheus.io/docs/concepts/data_model/][Data model | Prometheus]]
+
+时序数据使用如下的记名方式（notation）如下： *一个指标名再加上一系列标签* 。
+#+BEGIN_EXAMPLE
+<metric name>{<label name>=<label value>, ...}
+#+END_EXAMPLE 
+
+例如：
+#+BEGIN_EXAMPLE
+api_http_requests_total{method="POST", handler="/messages"}
+#+END_EXAMPLE
+
+又如：
+#+BEGIN_EXAMPLE
+go_gc_duration_seconds{quantile="0.75"}
+prometheus_http_request_duration_seconds_bucket{handler="/",le="60"}
+#+END_EXAMPLE
+
+** 指标类型 METRIC TYPES
+Prometheus客户端提供了四种核心指标类型。
+- Counter :: Counter只能增加无法减少，可以通过restart来置零
+- Gauge :: Gauge（读作geid3）数值可以任意升高或者降低
+- Histogram :: 直方图
+- Summary :: 摘要。和直方图类似，但也有不同之处
+
+Histogram和Summary之间的异同：
+- [[https://prometheus.io/docs/practices/histograms/][Histograms and summaries | Prometheus]]
+
+要点：
+- 两者都可以用来观察Count和Sum
+- histograms的一个直截了当的用法是用来计算观察值落入特定桶（buckets）的次数，而summaries则不能这么用
+- summaries and histograms都可以用来计算 *φ-quantiles* 。注意， 0 ≤ φ
+  ≤ 1 。两者的本质不同之处在于：summaries可以在Client端流式地计算
+  φ-quantiles，并且直接暴露（expose）出来，而histograms在Client只能暴
+  露出入桶数目（bucketed observation counts），并在Server端通过
+  *histogram_quantile()* 函数来计算 φ-quantiles
+- Summary不支持聚集（In general not aggregatable），所以对于多服务节
+  点求φ-quantiles时，应该使用Histogram，先求和再调用
+  histogram_quantile()。如下：
+
+使用summaries：
+#+BEGIN_EXAMPLE
+avg(http_request_duration_seconds{quantile="0.95"}) // Use summaries. BAD!
+#+END_EXAMPLE
+使用histograms：
+#+BEGIN_EXAMPLE
+histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le)) // Use histograms. GOOD.
+#+END_EXAMPLE
+
+两条规则：
+1. If you need to aggregate, choose histograms.（需要聚集则选用histograms）
+2. Otherwise, choose a histogram if you have an idea of the range and distribution of values that will be observed. Choose a summary if you need an accurate quantile, no matter what the range and distribution of the values is.
+
+** JOBS AND INSTANCES
+在Prometheus术语中，一个可以用来搜刮（scrape）的endpoint被称作实例
+（instance），它经常对应着一个单独的进程。一组相同作用的实例的集合被称
+作为作业（jobs）。
+
+例如下面的这个API server *job* ，它有四个 replicated *instances* ：
+#+BEGIN_EXAMPLE
+job: api-server
+  instance 1: 1.2.3.4:5670
+  instance 2: 1.2.3.4:5671
+  instance 3: 5.6.7.8:5670
+  instance 4: 5.6.7.8:5671
+#+END_EXAMPLE
+
+* QUERYING PROMETHEUS
+表达式语言的数据类型：
+- 瞬时向量（Instant vector）
+- 区间向量（Range vector）
+- 标量（Scalar）
+- 字符串（String）
+* EXPORTERS AND INTEGRATIONS
+** node_exporter
+- [[https://github.com/prometheus/node_exporter][GitHub - prometheus/node_exporter: Exporter for machine metrics]]
+
+它能收集本机的基础监控，并默认占用9100端口，供Prometheus来收集。
