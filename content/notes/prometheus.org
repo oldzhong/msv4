@@ -123,9 +123,10 @@ increase(trans_configs_count_error[10m])
 increase(save_trans_flow_duration_seconds_count[10m])
 #+END_SRC
 
-
 * EXPORTERS AND INTEGRATIONS
 ** node_exporter
 - [[https://github.com/prometheus/node_exporter][GitHub - prometheus/node_exporter: Exporter for machine metrics]]
 
 它能收集本机的基础监控，并默认占用9100端口，供Prometheus来收集。
+* Histogram and Summary
+k
