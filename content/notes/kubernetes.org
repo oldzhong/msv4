@@ -1,6 +1,7 @@
-#+TITLE: Kubernetes: Production-Grade Container Orchestration
+#+TITLE: Kubernetes: 生产级别的容器编排系统
 #+DATE: 2017-08-28 23:19:32
 
+Kubernetes 是用于自动部署，扩展和管理容器化应用程序的开源系统。
 
 * 资料收集
 - [[https://kubernetes.io/][Kubernetes - Production-Grade Container Orchestration]]
