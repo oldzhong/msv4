@@ -132,3 +132,20 @@ increase(save_trans_flow_duration_seconds_count[10m])
 它能收集本机的基础监控，并默认占用9100端口，供Prometheus来收集。
 * Histogram and Summary
 k
+* 问题记录
+** 两个bucket相减之后，grafana显示 "No data points" <2019-06-19 三 23:05>
+报错的PromQL如下：
+#+BEGIN_SRC sh
+save_flow_duration_seconds_bucket{le="+Inf"} - save_flow_duration_seconds_bucket{le="10.0"}
+#+END_SRC
+
+研究了一下，发现需要加上 *ignoring(le)* 。Prometheus的矢量在相互加减的
+时候，会做一对一的对应，并且会考虑到label，上面的PromQL中，减号左右两
+面的label是不同的，一个是le="+Inf"，另一个是le="10.0"，所以需要
+ignoring certain labels。正确的写法是
+#+BEGIN_SRC sh
+save_flow_duration_seconds_bucket{le="+Inf"} - ignoring(le) save_flow_duration_seconds_bucket{le="10.0"}
+#+END_SRC
+
+参考：
+- [[https://prometheus.io/docs/prometheus/latest/querying/operators/#one-to-one-vector-matches][Operators | Prometheus]]
