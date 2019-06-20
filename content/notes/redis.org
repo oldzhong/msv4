@@ -197,6 +197,30 @@ Redis 是否提供的批量 get 的方式。
 通过调整每组 pipeline 的 key 数目，应该可以优化一下总执行时间，有时间我回做一下
 测试。
 
+* 问题记录
+** redis listening socket *:8777: unable to bind socket <2019-06-20 四 19:46>
+*描述* ：我安装了redis，版本号为3.2.3。详情如下：
+#+BEGIN_SRC sh
+Redis server v=3.2.3 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=9a457fd352140cd6
+#+END_SRC
+
+然后执行 ~redis-server conf/redis.conf~ ，来启动redis，结果启动失败，日志里
+面报错：
+#+BEGIN_SRC sh
+28549:M 20 Jun 19:42:55.308 # Creating Server TCP listening socket *:8777: unable to bind socket
+#+END_SRC
+
+原因：高于3.0.1版本的redis有这个问题，解决方法是在redis.conf中绑定一下
+ip。如下：
+#+BEGIN_SRC sh
+# If you want you can bind a single interface, if the bind option is not
+# specified all the interfaces will listen for incoming connections.
+bind 127.0.0.1
+#+END_SRC
+
+参考：
+- [[https://blog.csdn.net/placat/article/details/53257303][Creating Server TCP listening socket *:6379: unable to bind socket - placat的专栏 - CSDN博客]]
+
 * 回顾
 ** 初步了解，有些质疑 <2014-02-21 五>
 初步了解了 Redis 的源码架构，并通过源码和别人的文章了解了 Redis 接受网络请求时的操作。

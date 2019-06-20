@@ -142,7 +142,7 @@ save_flow_duration_seconds_bucket{le="+Inf"} - save_flow_duration_seconds_bucket
 研究了一下，发现需要加上 *ignoring(le)* 。Prometheus的矢量在相互加减的
 时候，会做一对一的对应，并且会考虑到label，上面的PromQL中，减号左右两
 面的label是不同的，一个是le="+Inf"，另一个是le="10.0"，所以需要
-ignoring certain labels。正确的写法是
+ignoring certain labels。正确的写法如下：
 #+BEGIN_SRC sh
 save_flow_duration_seconds_bucket{le="+Inf"} - ignoring(le) save_flow_duration_seconds_bucket{le="10.0"}
 #+END_SRC
