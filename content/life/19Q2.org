@@ -92,6 +92,14 @@
 可能是这个壳导致的。于是拆掉后壳，发现WIFI连接瞬间满格了，连着WIFI玩
 《隐形守护者》如丝般顺滑。
 
+* 法海寺观壁画 <2019-05-19 日>
+#+CAPTION: 今天天气极好
+[[../static/imgs/19Q2/IMG_6784.jpg]]
+#+CAPTION: 法海寺门外
+[[../static/imgs/19Q2/IMG_6787.jpg]]
+#+CAPTION: 法海寺内
+[[../static/imgs/19Q2/IMG_6825.jpg]]
+
 * 周日下午逛了下红砖美术馆 <2019-05-26 日>
 #+CAPTION: 墙上的花草
 [[../static/imgs/19Q2/DSC02795.jpg]]
