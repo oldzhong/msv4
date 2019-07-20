@@ -393,3 +393,26 @@ brew install mysql@5.6
 
 重新安装mysql 5.6后，发现这次启动成功了！
 
+** 解决安装MySQL-python报错'my_config.h' file not found的问题 <2019-07-21 日 01:21>
+解决方法参考：
+- [[https://stackoverflow.com/questions/12218229/my-config-h-file-not-found-when-intall-mysql-python-on-osx-10-8]["my_config.h" file not found when intall mysql-python on osx 10.8 - Stack Overflow]]
+  
+#+BEGIN_SRC sh
+brew install mysql
+brew unlink mysql
+brew install mysql-connector-c
+sed -i -e 's/libs="$libs -l "/libs="$libs -lmysqlclient -lssl -lcrypto"/g' /usr/local/bin/mysql_config
+pip install MySQL-python
+brew unlink mysql-connector-c
+brew link --overwrite mysql
+#+END_SRC
+  
+但是有一点不一样，那就要把/usr/local/bin/mysql_config文件的libs那一行改
+成：
+#+BEGIN_SRC sh
+libs="$libs -lmysqlclient"
+#+END_SRC
+而不是：
+#+BEGIN_SRC sh
+libs="$libs -lmysqlclient -lssl -lcrypto"
+#+END_SRC
