@@ -1,0 +1,6 @@
+#+TITLE: Hadoop DistCp
+#+DATE: 2019-07-21
+#+KEYWORDS: Hadoop
+
+- [[https://hadoop.apache.org/docs/current/hadoop-distcp/DistCp.html][Apache Hadoop Distributed Copy – DistCp Version2 Guide]]
+
