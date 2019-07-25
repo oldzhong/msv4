@@ -7,7 +7,7 @@
 * 研究源码
 ** 划分过程
 
-** copy过程 <2019-07-22 一 17:15>
+** 文件copy的实现 <2019-07-22 一 17:15>
 核心过程在 ~hadoop-distcp~ 下面的
 ~mapred/RetriableFileCopyCommand.java~ 文件里的copyBytes() 方法。源码
 如下：

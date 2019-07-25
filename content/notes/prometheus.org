@@ -154,3 +154,35 @@ save_flow_duration_seconds_bucket{le="+Inf"} - ignoring(le) save_flow_duration_s
 
 参考：
 - [[https://prometheus.io/docs/prometheus/latest/querying/operators/#one-to-one-vector-matches][Operators | Prometheus]]
+** 如何将直方图的bucket相减计算一定时间里的增量？ <2019-07-25 四 17:11>
+折腾了挺久才搞定的，尝试过各种PromQL，但是都是报错。
+
+PromQL 示例一:
+#+BEGIN_EXAMPLE
+increase((build_flow_duration_seconds_bucket{le="+Inf"} - ignoring(le) build_flow_duration_seconds_bucket{le="10.0"})[5m])
+#+END_EXAMPLE
+报错如下：
+#+BEGIN_EXAMPLE
+parse error at char 159: unexpected "]" in subquery selector, expected ":"
+#+END_EXAMPLE
+
+PromQL 示例一:
+#+BEGIN_EXAMPLE
+increase(build_flow_duration_seconds_bucket{le="+Inf"}[5m] - ignoring(le) build_flow_duration_seconds_bucket{le="10.0"}[5m])
+#+END_EXAMPLE
+报错如下：
+#+BEGIN_EXAMPLE
+parse error at char 163: binary expression must contain only scalar and instant vector types
+#+END_EXAMPLE
+
+最后我改成如下的PromQL，终于成功了！
+#+BEGIN_EXAMPLE
+increase(build_flow_duration_seconds_bucket{le="+Inf"}[10m]) - ignoring(le) increase(build_flow_duration_seconds_bucket{le="10.0"}[10m])
+#+END_EXAMPLE
+
+总结经验：
+1. 区间矢量之间无法相减，必须通过类似increase()转化为瞬间矢量才能相减
+2. [5m]这种时间范围选择器有语法要求，加在括号后会报错
+3. ignoring(le)仍然是必须的
+
+
