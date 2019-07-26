@@ -5,6 +5,46 @@
 - [[https://hadoop.apache.org/docs/current/hadoop-distcp/DistCp.html][Apache Hadoop Distributed Copy – DistCp Version2 Guide]]
 
 * 研究源码
+** distcp命令行解析过程 <2019-07-26 五 11:00>
+入口在DistCp.java的run(String[] argv)里面，先用 ~OptionsParser~ 来处理
+argv参数列表，OptionsParser内部使用CommandLineParser来做解析。解析然
+后，返回 ~DistCpOptions~ ，然后使用DistCpOptions构造 ~DistCpContext~
+实例，DistCpContext是DistCpOptions的一层封装，将options封装为方法，方
+便使用。
+
+代码如下：
+#+BEGIN_SRC java
+  /**
+   * Implementation of Tool::run(). Orchestrates the copy of source file(s)
+   * to target location, by:
+   *  1. Creating a list of files to be copied to target.
+   *  2. Launching a Map-only job to copy the files. (Delegates to execute().)
+   * @param argv List of arguments passed to DistCp, from the ToolRunner.
+   * @return On success, it returns 0. Else, -1.
+   */
+  @Override
+  public int run(String[] argv) {
+    if (argv.length < 1) {
+      OptionsParser.usage();
+      return DistCpConstants.INVALID_ARGUMENT;
+    }
+    
+    try {
+      context = new DistCpContext(OptionsParser.parse(argv));
+      checkSplitLargeFile();
+      setTargetPathExists();
+    } catch (Throwable e) {
+      System.err.println("Invalid arguments: " + e.getMessage());
+      OptionsParser.usage();      
+      return DistCpConstants.INVALID_ARGUMENT;
+    }
+    
+    try {
+      execute();
+    } catch (Inva
+      ...
+#+END_SRC
+
 ** 划分过程
 
 ** 文件copy的实现 <2019-07-22 一 17:15>
