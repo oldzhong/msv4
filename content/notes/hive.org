@@ -1,0 +1,41 @@
+#+TITLE: Hive
+#+DATE: 2019-08-08
+
+
+- [[https://hive.apache.org/][Apache Hive TM]]
+#+BEGIN_QUOTE
+The Apache Hive ™ data warehouse software facilitates reading,
+writing, and managing large datasets residing in distributed storage
+using SQL. Structure can be projected onto data already in storage. A
+command line tool and JDBC driver are provided to connect users to
+Hive.
+#+END_QUOTE
+
+* 阅读 Hive Tutorial <2019-08-09 五 01:56>
+- [[https://cwiki.apache.org/confluence/display/Hive/Tutorial][Tutorial - Apache Hive - Apache Software Foundation]]
+  
+** Hive是什么？
+Hive是一个基于Hadoop的数据仓库。Hive被设计用来简化数据摘要（enable
+easy data summarization），ad-hoc查询，和大数据集的分析。Hive还提供了
+多个地方供用户集成自己的自定义分析，例如UDFs（User Defined Functions）。
+
+** 数据单位
+Hive的数据被以如下的方式组织：
+- Databases :: 数据库
+- Tables :: 表
+- Partitions :: 分区
+- Buckets (or Clusters) :: Partition上的数据可以被Hash的方式分割为多个Buckets。
+
+** 使用方法和例子
+建表语句示例：
+#+BEGIN_SRC sql
+CREATE TABLE page_view(viewTime INT, userid BIGINT,
+                page_url STRING, referrer_url STRING,
+                ip STRING COMMENT 'IP Address of the User')
+COMMENT 'This is the page view table'
+PARTITIONED BY(dt STRING, country STRING)
+STORED AS SEQUENCEFILE;
+#+END_SRC
+
+* Hive SQL
+- [[https://cwiki.apache.org/confluence/display/Hive/Home#Home-UserDocumentation][Home - Apache Hive - Apache Software Foundation]]
