@@ -29,7 +29,6 @@ har://hdfs-xxx-xxx-hdfs.xxx.baidu.com:5431x/app/log/xxxe_click/20140514.har/app/
 HAR 下的 */app* 目录。
 
 * Hadoop Streaming
-
 ** 如何分发和打包（V2）<2015-01-21 三>
 公司的 Hadoop 版本可能比较落后，带目录结构的文件的分发方法在网上不好搜索到，
 后来我在公司内部的一篇《Hadoop-v2 Streaming 使用手册》里找到了详细解释。摘
@@ -41,7 +40,6 @@ HAR 下的 */app* 目录。
 | -cacheArchive   | 将预先传到集群上的文件解包，让 MR 程序内部使用                                                                    | 支持目录结构！                                                                                      |
 
 * 集群间拷贝 - distcp
-** update 与
 ** distcp 任务提交/执行过程中突然失败，客户端错误码为 137 <2015-03-15 日>
 +原因可能是执行 MR 任务的某台机器内存爆了+ ，可能提交的任务太多了。参考：
 - [[http://zorro.blog.51cto.com/2139862/1078586]]
@@ -54,6 +52,8 @@ distcp，发现没有出现错误码 137 的了。果然，是我的提交任务
 * Jetty in Hadoop
 - [[http://leongfans.iteye.com/blog/1329309][Hadoop源码解读-Http服务器Jetty的使用 - - ITeye博客]]
 - [[https://zh.wikipedia.org/wiki/Jetty][Jetty - 维基百科，自由的百科全书]]
+  
+* 
 
 * 问题搜集
 ** Streaming 的 Reducer 运行失败，提示：java.lang.NullPointerException
