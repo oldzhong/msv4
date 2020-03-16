@@ -5,7 +5,7 @@ export default class Utils {
     static pageUrl(page) {
         return prefixLink(page.path)        
     }
-    static pageDate(page) {
+static pageDate(page) {
         return Utils.pageDateFormat(page.data.date)
     }
     static pageDateFormat(date) {
