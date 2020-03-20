@@ -22,6 +22,7 @@ export default class Gallery extends React.Component {
             <div className="gallery">
                 <div className="title">GALLERY</div>
                 <div className="images">
+                    {/* 2019 */}
 
                     {/* 2017 */}
                     <div className="image">

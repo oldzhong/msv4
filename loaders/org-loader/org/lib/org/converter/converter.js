@@ -168,7 +168,6 @@ Converter.prototype = {
         // 如果是event的话，section是具有固定锚点的，锚点就是事件的时间
         sectionNumberText = eventAnchor;
         node.sectionNumberText = sectionNumberText;
-        // childText = childText.replace(/\s*&#60;(\d{4}.+)&#62;$/, '');
         
       }
 
