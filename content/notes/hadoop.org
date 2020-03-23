@@ -53,7 +53,6 @@ distcp，发现没有出现错误码 137 的了。果然，是我的提交任务
 - [[http://leongfans.iteye.com/blog/1329309][Hadoop源码解读-Http服务器Jetty的使用 - - ITeye博客]]
 - [[https://zh.wikipedia.org/wiki/Jetty][Jetty - 维基百科，自由的百科全书]]
   
-* 
 
 * 问题搜集
 ** Streaming 的 Reducer 运行失败，提示：java.lang.NullPointerException
@@ -96,3 +95,7 @@ for pid, count in sorted(pid_counts.items(), key=itemgetter(1), reverse=True):
 for pid in pid_counts:
   print pid, pid_counts[pid]
 #+END_SRC
+** 读取lzo压缩格式的seqfile时报错 native-lzo library not available <2020-03-23 一 17:33>
+网上搜索，有回答说是因为 hadoop-lzo-***.jar is not in your HADOOP_CLASSPATH
+- [[https://stackoverflow.com/questions/18065607/native-lzo-library-not-available-on-hadoop-datanodes][native-lzo library not available on Hadoop datanodes - Stack Overflow]]
+
