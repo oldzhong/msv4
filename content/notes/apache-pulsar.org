@@ -1,0 +1,20 @@
+#+TITLE: Apache Pulsar
+#+DATE: 2021-04-03
+
+* Apache BookKeeper
+- [[https://github.com/apache/bookkeeper][GitHub - apache/bookkeeper: Apache Bookkeeper]]
+
+Apache BookKeeper is a scalable, fault tolerant and low latency
+storage service optimized for append-only workloads.它是一种为
+apply-only优化的可伸缩的、错误容忍的、低延迟的存储服务。
+
+它适合用在以下场景：
+- WAL (Write-Ahead-Logging), e.g. HDFS NameNode, Twitter Manhattan, HerdDB.
+- Message Store, e.g. Apache Pulsar.
+- Offset/Cursor Store, e.g. Apache Pulsar.
+- Object/Blob Store, e.g. storing state machine snapshots.
+  
+
+
+* Pulsar SQL
+- [[https://pulsar.apache.org/docs/en/sql-overview/][Pulsar SQL Overview · Apache Pulsar]]
